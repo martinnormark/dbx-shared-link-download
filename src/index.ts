@@ -1,5 +1,9 @@
-function init(firstName: string, lastName: string) {
-  return `${firstName} ${lastName}`;
-}
+import { Dropbox } from 'dropbox';
 
-console.log(init('Hello', 'world'));
+const sharedLink = '';
+
+console.log('Will check shared link');
+
+const dbx = new Dropbox({ accessToken: '' });
+
+const sharedMetadata = await dbx.sharingGetSharedLinkMetadata()
